@@ -1,3 +1,5 @@
+import { Variants } from "framer-motion";
+
 export const COLORS = {
   primary: "#4cd7f6", // Cyan
   secondary: "#fbabff", // Magenta
@@ -12,7 +14,7 @@ export const COLORS = {
   moods: ["#4cd7f6", "#fbabff", "#c084fc", "#facc15"],
 };
 
-export const ANIMATIONS = {
+export const ANIMATIONS: Record<string, Variants> = {
   stagger: {
     hidden: { opacity: 0 },
     show: { opacity: 1, transition: { staggerChildren: 0.2, delayChildren: 0.1 } },
