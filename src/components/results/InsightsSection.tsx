@@ -12,16 +12,18 @@ interface InsightsSectionProps {
 
 export const InsightsSection: React.FC<InsightsSectionProps> = ({ mood, archetype, genres }) => {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-      <div className="glass-panel rounded-xl p-8 relative overflow-hidden flex flex-col items-center justify-center min-h-[400px]">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6">
+      <div className="glass-panel rounded-xl p-5 md:p-8 relative overflow-hidden flex flex-col items-center justify-center min-h-[350px] md:min-h-[400px]">
         <div className="scan-line" />
         <h3 className="text-[18px] font-semibold text-[#e2e1eb] mb-6 w-full text-left flex items-center gap-2">
           <span className="material-symbols-outlined text-[#4cd7f6]">radar</span> {UI_LABELS.dnaMapTitle}
         </h3>
-        <AudioRadar mood={mood} size={240} />
+        <div className="scale-[0.85] md:scale-100 origin-center flex items-center justify-center w-full">
+          <AudioRadar mood={mood} size={240} />
+        </div>
       </div>
 
-      <div className="glass-panel rounded-xl p-8 relative overflow-hidden flex flex-col justify-center bg-gradient-to-br from-white/[0.02] to-transparent">
+      <div className="glass-panel rounded-xl p-5 md:p-8 relative overflow-hidden flex flex-col justify-center bg-gradient-to-br from-white/[0.02] to-transparent">
         <div className="absolute top-0 right-0 p-4 opacity-10">
           <span className="material-symbols-outlined text-[120px] text-[#fbabff]">analytics</span>
         </div>

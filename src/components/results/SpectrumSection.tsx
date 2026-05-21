@@ -11,7 +11,7 @@ interface SpectrumSectionProps {
 
 export const SpectrumSection: React.FC<SpectrumSectionProps> = ({ mood }) => {
   return (
-    <div className="glass-panel rounded-xl p-8 relative overflow-hidden group border border-white/5 bg-white/[0.02]">
+    <div className="glass-panel rounded-xl p-5 md:p-8 relative overflow-hidden group border border-white/5 bg-white/[0.02]">
       <div className="absolute inset-0 bg-gradient-to-br from-[#4cd7f6]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
       <div className="relative z-10">
         <h3 className="text-[18px] font-semibold text-[#e2e1eb] mb-8 flex items-center gap-2">

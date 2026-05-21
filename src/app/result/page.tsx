@@ -127,19 +127,19 @@ export default function ResultPage() {
                 initial="hidden"
                 animate="show"
                 variants={ANIMATIONS.stagger}
-                className="max-w-5xl mx-auto px-6 py-20 lg:py-32"
+                className="max-w-5xl mx-auto px-4 md:px-6 py-12 md:py-20 lg:py-32"
               >
                 <HeroSection archetype={profile.archetype} />
 
                 {/* Main Data Grid */}
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 md:gap-6 mb-4 md:mb-6">
                   {/* Left Column: Mood Spectrum (Takes 2 columns) */}
                   <div className="lg:col-span-2">
                     <SpectrumSection mood={profile.moodSpectrum} />
                   </div>
 
                   {/* Right Column: Personality Traits */}
-                  <div className="glass-panel rounded-xl p-8 border border-white/5 bg-white/[0.02]">
+                  <div className="glass-panel rounded-xl p-5 md:p-8 border border-white/5 bg-white/[0.02]">
                     <h3 className="text-[18px] font-semibold text-[#e2e1eb] mb-6 flex items-center gap-2">
                       <span className="material-symbols-outlined text-[#fbabff]"></span> Personality
                     </h3>
@@ -158,7 +158,7 @@ export default function ResultPage() {
                 </div>
 
                 {/* Secondary Grid: Artists & Tracks */}
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6 mb-4 md:mb-6">
                   <ArtistLineup artists={profile.topArtists} />
                   <TrackRotation tracks={profile.topTracks} />
                 </div>

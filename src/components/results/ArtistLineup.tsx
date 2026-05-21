@@ -9,11 +9,11 @@ interface ArtistLineupProps {
 
 export const ArtistLineup: React.FC<ArtistLineupProps> = ({ artists }) => {
   return (
-    <div className="glass-panel rounded-xl p-8 border border-white/5 bg-white/[0.02]">
-      <h3 className="text-[18px] font-semibold text-[#e2e1eb] mb-8 flex items-center gap-2">
+    <div className="glass-panel rounded-xl p-5 md:p-8 border border-white/5 bg-white/[0.02]">
+      <h3 className="text-[18px] font-semibold text-[#e2e1eb] mb-6 md:mb-8 flex items-center gap-2">
         <span className="material-symbols-outlined text-[#4cd7f6]">group</span> {UI_LABELS.lineupTitle}
       </h3>
-      <div className="flex flex-col gap-6">
+      <div className="flex flex-col gap-4 md:gap-6">
         {artists.slice(0, 3).map((artist, i) => (
           <motion.a 
             key={i}
@@ -23,9 +23,9 @@ export const ArtistLineup: React.FC<ArtistLineupProps> = ({ artists }) => {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.1 * i }}
-            className="flex items-center gap-6 p-4 rounded-xl hover:bg-white/5 transition-all group cursor-pointer border border-transparent hover:border-white/5"
+            className="flex items-center gap-4 md:gap-6 p-3 md:p-4 rounded-xl hover:bg-white/5 transition-all group cursor-pointer border border-transparent hover:border-white/5"
           >
-            <div className="relative w-20 h-20 flex-shrink-0">
+            <div className="relative w-14 h-14 md:w-20 md:h-20 flex-shrink-0">
               <div className="absolute inset-0 rounded-2xl border-2 border-[#4cd7f6]/20 group-hover:border-[#4cd7f6]/50 transition-all duration-500 group-hover:scale-105" />
               <img 
                 src={artist.imageUrl || ""} 

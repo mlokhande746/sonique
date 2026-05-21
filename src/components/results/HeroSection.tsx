@@ -14,7 +14,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ archetype }) => {
       <span className="label-caps text-[12px] text-[#fbabff] mb-4 block tracking-[0.4em] font-bold">
         {UI_LABELS.archetypeTag}
       </span>
-      <h1 className="text-[64px] md:text-[100px] font-black text-[#e2e1eb] leading-none mb-6 tracking-tighter mix-blend-plus-lighter">
+      <h1 className="text-5xl md:text-[80px] lg:text-[100px] font-black text-[#e2e1eb] leading-none mb-6 tracking-tighter mix-blend-plus-lighter break-words hyphens-auto">
         {archetype}
       </h1>
       <div className="flex justify-center">
