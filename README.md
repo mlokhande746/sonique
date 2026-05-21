@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Sonique - Spotify Personality DNA 🧬🎧
 
-## Getting Started
+Sonique is a viral, highly-visual web application that connects to your Spotify account, deeply analyzes your top tracks, artists, and audio features, and generates a personalized "DNA Profile" card that you can download and share on social media.
 
-First, run the development server:
+## ✨ Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Spotify OAuth Integration:** Secure, seamless login using NextAuth.
+- **Deep Audio Analysis:** Analyzes your top tracks' danceability, energy, acousticness, and valence to calculate your "Mood Spectrum".
+- **Dynamic Archetypes:** Assigns you a unique music personality archetype (e.g., *The Alchemist*, *The Nightrider*, *The Neon Dreamer*) based on your listening habits.
+- **Beautiful UI/UX:** A stunning, glassmorphism-inspired dark mode interface with buttery smooth micro-animations powered by Framer Motion.
+- **Fully Responsive:** Looks incredible whether you're viewing it on a massive desktop monitor or your phone.
+- **Sharable Exports:** Generates a high-quality, pixel-perfect image of your DNA card ready to be shared on Instagram Stories, Twitter, or with friends.
+
+## 🛠️ Tech Stack
+
+- **Framework:** Next.js (App Router)
+- **Styling:** Tailwind CSS + Vanilla CSS (for complex animations)
+- **Animations:** Framer Motion
+- **Authentication:** NextAuth.js
+- **Validation & Security:** Zod (Runtime type-checking)
+- **Deployment:** Vercel
+
+## 🚀 Getting Started
+
+### Prerequisites
+You will need a Spotify Developer Account to generate API keys. Go to the [Spotify Developer Dashboard](https://developer.spotify.com/dashboard) and create a new application.
+
+### Environment Variables
+Create a `.env.local` file in the root directory and add the following keys:
+
+```env
+SPOTIFY_CLIENT_ID=your_spotify_client_id
+SPOTIFY_CLIENT_SECRET=your_spotify_client_secret
+NEXTAUTH_URL=http://localhost:3000 # Use your actual domain in production
+NEXTAUTH_SECRET=a_random_secure_string_for_encryption
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Installation
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Clone the repository
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Run the development server:
+   ```bash
+   npm run dev
+   ```
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🔒 Security Notes
+This application implements strict server-side validation using **Zod** to prevent injection attacks and ensures that Spotify Access Tokens never leak to the client-side browser, mitigating XSS risks.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+*Designed to be shared. Built to be viral.*
